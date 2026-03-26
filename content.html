@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="font-jakarta bg-white overflow-x-hidden">
+    <header>
+        <div class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] z-50">
+
+            <!--navbar-->
+            <div
+                class="flex items-center justify-between px-4 py-2 rounded-full bg-linear-to-r from-[#C8D2DA]/40 via-[#B6C8D9]/40 to-[#9FB6D6]/40 backdrop-blur-xl border border-white/30 shadow-[0_10px_30px_rgba(0,0,0,0.15)] lg:py-3 lg:px-3">
+                <!--logo-->
+                <img src="./assets/logo.png" class="w-8 lg:w-10">
+
+                <!--dekstop-->
+                <div class="hidden lg:flex items-center gap-8 text-[#433477] text-base lg:text-lg">
+                    <a href="./index.html" class="hover:bg-purple-200/40 px-4 py-2 rounded-full">Home</a>
+                    <a href="./about.html" class="hover:bg-purple-200/40 px-4 py-2 rounded-full">About Us</a>
+                    <a href="./content.html" class="hover:bg-purple-200/40 px-4 py-2 rounded-full">Smart Learning</a>
+                    <a href="./contact.html" class="hover:bg-purple-200/40 px-4 py-2 rounded-full">Contact</a>
+                </div>
+                <!--btn dekstop-->
+                <div class="hidden lg:block">
+                    <button
+                        class="px-6 py-2 rounded-full text-white bg-linear-to-r from-[#91E6E0] to-[#2F6388] shadow-md lg:py-3 lg:text-lg">
+                        Start Learning Now
+                    </button>
+                </div>
+
+                <!--mobile-->
+                <button id="menuBtn" class="text-2xl text-[#433477] lg:hidden">
+                    <i id="menuIcon" class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+
+        <!--mobile menu-->
+        <div id="mobileMenu" class="fixed inset-0 z-40 hidden">
+            <!--overlay-->
+            <div id="overlay" class="absolute inset-0 bg-black/20 backdrop-blur-sm opacity-0 transition duration-300">
+            </div>
+            <!--menu box-->
+            <div id="menuBox"
+                class="absolute right-4 top-24 w-[75%] md:w-[40%] rounded-2xl p-6 bg-white/20 backdrop-blur-xl border border-white/30 shadow-[-10px_0_40px_rgba(0,0,0,0.2)] transform translate-x-full transition duration-300">
+                <div class="flex flex-col gap-6 text-[#433477] text-base">
+                    <a href="./index.html" class="flex items-center gap-3 hover:bg-purple-200/40 px-4 py-3 rounded-xl">
+                        <i class="ri-home-line"></i> Home
+                    </a>
+                    <a href="./about.html" class="flex items-center gap-3 hover:bg-purple-200/40 px-4 py-3 rounded-xl">
+                        <i class="ri-user-line"></i> About Us
+                    </a>
+                    <a href="./content.html" class="flex items-center gap-3 hover:bg-purple-200/40 px-4 py-3 rounded-xl">
+                        <i class="ri-book-open-line"></i> Smart Learning
+                    </a>
+                    <a href="./contact.html" class="flex items-center gap-3 hover:bg-purple-200/40 px-4 py-3 rounded-xl">
+                        <i class="ri-mail-line"></i> Contact
+                    </a>
+                    <!--btn mobile-->
+                    <button class="mt-4 px-6 py-3 rounded-full text-white bg-linear-to-r from-[#91E6E0] to-[#2F6388]">
+                        Start Learning
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--about us-->
+    <section class="min-h-[185vh] relative overflow-hidden">
+        <!--background-->
+        <div class="absolute -top-40 -right-20 w-75 h-100 bg-blue rounded-full blur-[120px] opacity-40"></div>
+        <div class="absolute top-60 -left-20 w-75 h-100 bg-purple rounded-full blur-[120px] opacity-70"></div>
+        <div class="absolute bottom-50 -right-20 w-125 h-100 bg-[#FFEDBF] rounded-full blur-[120px] opacity-70"></div>
+        <!--title-->
+        <div
+            class="mt-25 mb-20 relative z-10 text-center flex justify-center items-center h-20 fade-up md:mb-16 md:h-32">
+            <h2
+                class="absolute text-5xl font-stretch-extra-expanded tracking widest font-Playfair text-[#1E4A47] font-extrabold whitespace-nowrap md:text-[90px] lg:text-[100px]">
+                Smart Learning
+            </h2>
+            <p class="absolute text-[#6D6E71] mt-30 text-base/6 lg:text-[28px] lg:mt-40">Explore new skills, try real
+                projects, and <br>grow at
+                your own pace!</p>
+        </div>
+        <!--search bar-->
+        <div
+            class="text-[#98A8B6] text-[14px] justify-center gap-4 border border-[#BDCEDE] rounded-3xl ml-20 mr-20 px-5 py-2 bg-[#E3F9F7]/10 shadow-2xl backdrop-blur-2xl lg:text-2xl lg:py-3 lg:mt-20">
+            <i class="ri-search-line"></i>
+            <span>Search Course, Topics, or Skills</span>
+        </div>
+        <!--slider-->
+        <div class="mt-4 px-6">
+            <div class="overflow-x-auto scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none]">
+                <div
+                    class="flex justify-between gap-3 w-max text-[14px] text-[#63737F] border border-[#BDCEDE] rounded-full px-4 py-2 bg-[#E3F9F7]/10 backdrop-blur-2xl shadow-lg md:ml-20 md:mr-20 md:px-6 lg:text-lg lg:ml-50 lg:px-30 lg:gap-10">
+                    <!-- item -->
+                    <button class="flex items-center gap-2 px-4 py-1.5 bg-white/60 rounded-full whitespace-nowrap">
+                        <i class="ri-gallery-view-2"></i>
+                        All
+                    </button>
+                    <button class="px-4 py-1.5 rounded-full whitespace-nowrap hover:bg-purple-200/40 transition">
+                        Future Skill
+                    </button>
+                    <button class="px-4 py-1.5 rounded-full whitespace-nowrap hover:bg-purple-200/40 transition">
+                        Projects
+                    </button>
+                    <button class="px-4 py-1.5 rounded-full whitespace-nowrap hover:bg-purple-200/40 transition">
+                        Productivity
+                    </button>
+                    <button class="px-4 py-1.5 rounded-full whitespace-nowrap hover:bg-purple-200/40 transition">
+                        Mindset
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--card-->
+        <div class="mt-10 space-y-6 px-6 md:px-10 lg:px-20">
+
+            <div class="fade-up flex flex-col md:flex-row items-center gap-6 
+      p-6 rounded-3xl bg-white/40 backdrop-blur-xl shadow-xl">
+
+                <!--image-->
+                <img src="./assets/person illustration.png" class="w-52 md:w-60">
+
+                <!--content-->
+                <div class="flex-1 text-center md:text-left">
+
+                    <h2 class="text-2xl md:text-3xl font-semibold text-[#433477]">
+                        Build Your First App
+                    </h2>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3 text-sm mt-2 text-[#433477]">
+                        <span><i class="ri-time-line"></i> 2h 20m</span>
+                        <span>|</span>
+                        <span><i class="ri-user-line"></i> Beginner</span>
+                    </div>
+
+                    <div class="mt-2 text-yellow-400">
+                        ★★★★★ <span class="text-[#433477] text-sm ml-2">4.9 (1.3k)</span>
+                    </div>
+
+                    <p class="mt-3 text-[#433477]">
+                        Start from zero and build your first app, step by step.
+                    </p>
+
+                    <div class="mt-5">
+                        <button class="px-6 py-3 rounded-full text-white 
+            bg-linear-to-r from-[#91E6E0] to-[#6B5FA7] hover:scale-105 transition">
+                            Start Course →
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--card 2-->
+            <div class="fade-up flex flex-col md:flex-row items-center gap-6 
+      p-6 rounded-3xl bg-white/40 backdrop-blur-xl shadow-xl">
+
+                <img src="./assets/illustration person.png" class="w-52 md:w-60">
+
+                <div class="flex-1 text-center md:text-left">
+
+                    <h2 class="text-2xl md:text-3xl font-semibold text-[#433477]">
+                        UI/UX Design Basics
+                    </h2>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-3 text-sm mt-2 text-[#433477]">
+                        <span><i class="ri-time-line"></i> 4h</span>
+                        <span>|</span>
+                        <span><i class="ri-user-line"></i> Intermediate</span>
+                    </div>
+
+                    <div class="mt-2 text-yellow-400">
+                        ★★★★★ <span class="text-[#433477] text-sm ml-2">4.8 (1.6k)</span>
+                    </div>
+
+                    <p class="mt-3 text-[#433477]">
+                        Learn the fundamentals of user interface and user experience design.
+                    </p>
+
+                    <div class="mt-5">
+                        <button class="px-6 py-3 rounded-full text-white 
+            bg-linear-to-r from-[#91E6E0] to-[#6B5FA7] hover:scale-105 transition">
+                            Start Course
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        <footer class="bg-[#004B6B] text-white pt-16 pb-8 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
+
+                <div class="flex flex-col space-y-6">
+                    <div class="flex items-center space-x-2 group">
+                        <div
+                            class="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform duration-300">
+                            <img src="./assets/logo.png" alt="logo" class="w-8">
+                        </div>
+                    </div>
+                    <p class="text-white text-sm leading-relaxed max-w-xs">
+                        Learn design, coding, and digital technology through practical courses that help students build
+                        useful skills for the future.
+                    </p>
+                </div>
+
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-4">
+                        <li><a href="./index.html"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">Home</a>
+                        </li>
+                        <li><a href="./about.html"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">About
+                                us</a></li>
+                        <li><a href="./content.html"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">Our
+                                Values</a>
+                        </li>
+                        <li><a href="./contact.html"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Resources</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block ">Our
+                                Courses</a></li>
+                        <li><a href="#"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">Tesrimonials</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">Benefits</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-center space-x-3 group cursor-pointer">
+                            <i class="ri-phone-line text-xl hover:transition duration-300 hover:scale-110"></i>
+                            <span class="text-sm group-hover:text-white transition-colors">+62 41234 5678</span>
+                        </li>
+                        <li class="flex items-center space-x-3 group cursor-pointer">
+                            <i class="ri-mail-line text-xl hover:transition duration-300 hover:scale-110"></i>
+                            <span class="text-sm group-hover:text-white transition-colors">hello@smartjourney.com</span>
+                        </li>
+                        <li class="flex items-center space-x-3 group cursor-pointer">
+                            <i class="ri-instagram-line text-xl hover:transition duration-300 hover:scale-110"></i>
+                            <span class="text-sm group-hover:text-white transition-colors">smartjourney.id</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+            <div
+                class="border-t border-white pt-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs text-slate-400">
+                <p>© 2026 LearnHub. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+
+
+        </div>
+        </footer>
+
+
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>

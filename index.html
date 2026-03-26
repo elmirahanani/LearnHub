@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="font-jakarta bg-white overflow-x-hidden">
+    <header>
+        <div class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] z-50">
+
+            <!--navbar-->
+            <div
+                class="flex items-center justify-between px-4 py-2 rounded-full bg-linear-to-r from-[#C8D2DA]/40 via-[#B6C8D9]/40 to-[#9FB6D6]/40 backdrop-blur-xl border border-white/30 shadow-[0_10px_30px_rgba(0,0,0,0.15)] lg:py-3 lg:px-3">
+                <!--logo-->
+                <img src="./assets/logo.png" class="w-8 lg:w-10">
+
+                <!--dekstop-->
+                <div class="hidden lg:flex items-center gap-8 text-[#433477] text-base lg:text-lg">
+                    <a href="./index.html" class="hover:bg-purple-200/40 px-4 py-2 rounded-full">Home</a>
+                    <a href="./about.html" class="hover:bg-purple-200/40 px-4 py-2 rounded-full">About Us</a>
+                    <a href="./content.html" class="hover:bg-purple-200/40 px-4 py-2 rounded-full">Smart Learning</a>
+                    <a href="./contact.html" class="hover:bg-purple-200/40 px-4 py-2 rounded-full">Contact</a>
+                </div>
+                <!--btn dekstop-->
+                <div class="hidden lg:block">
+                    <button
+                        class="px-6 py-2 rounded-full text-white bg-linear-to-r from-[#91E6E0] to-[#2F6388] shadow-md lg:py-3 lg:text-lg">
+                        Start Learning Now
+                    </button>
+                </div>
+
+                <!--mobile-->
+                <button id="menuBtn" class="text-2xl text-[#433477] lg:hidden">
+                    <i id="menuIcon" class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+
+        <!--mobile menu-->
+        <div id="mobileMenu" class="fixed inset-0 z-40 hidden">
+            <!--overlay-->
+            <div id="overlay" class="absolute inset-0 bg-black/20 backdrop-blur-sm opacity-0 transition duration-300">
+            </div>
+            <!--menu box-->
+            <div id="menuBox"
+                class="absolute right-4 top-24 w-[75%] md:w-[40%] rounded-2xl p-6 bg-white/20 backdrop-blur-xl border border-white/30 shadow-[-10px_0_40px_rgba(0,0,0,0.2)] transform translate-x-full transition duration-300">
+                <div class="flex flex-col gap-6 text-[#433477] text-base">
+                    <a href="./index.html" class="flex items-center gap-3 hover:bg-purple-200/40 px-4 py-3 rounded-xl">
+                        <i class="ri-home-line"></i> Home
+                    </a>
+                    <a href="./about.html" class="flex items-center gap-3 hover:bg-purple-200/40 px-4 py-3 rounded-xl">
+                        <i class="ri-user-line"></i> About Us
+                    </a>
+                    <a href="./content.html" class="flex items-center gap-3 hover:bg-purple-200/40 px-4 py-3 rounded-xl">
+                        <i class="ri-book-open-line"></i> Smart Learning
+                    </a>
+                    <a href="./contact.html" class="flex items-center gap-3 hover:bg-purple-200/40 px-4 py-3 rounded-xl">
+                        <i class="ri-mail-line"></i> Contact
+                    </a>
+                    <!--btn mobile-->
+                    <button class="mt-4 px-6 py-3 rounded-full text-white bg-linear-to-r from-[#91E6E0] to-[#2F6388]">
+                        Start Learning
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--hero-->
+    <section class="min-h-screen relative overflow-hidden">
+        <div class="absolute -top-40 -right-20 w-75 h-100 bg-blue rounded-full blur-[120px] opacity-40">
+        </div>
+        <div class="absolute bottom-0 -left-20 w-75 h-100 bg-purple rounded-full blur-[120px] opacity-40">
+        </div>
+
+        <div class="relative z-10 pt-40 px-6 md:ml-15 lg:mt-4">
+            <div>
+                <h1 class="text-5xl font-Playfair text-[#082523] font-extrabold md:text-6xl lg:text-[100px]">Learn
+                    Today, <br>Shape Your<br>Future
+                </h1>
+                <p class="mt-4 text-sm text-[#77787A] font-medium md:text-base/6 lg:text-[24px]/8 lg:font-normal">
+                    Discover courses, improve <br>your skills, and build your <br>career with expert-led <br>learning.
+                </p>
+            </div>
+
+            <button
+                class="mt-6 text-xs text-white px-6 py-3 rounded-full bg-[linear-gradient(90deg,#91E6E0_0%,#2F6388_100%)] inse-shadow-indigo-500 md:px-8 md:py-3 md:text-sm lg:px-20 lg:py-4 lg:text-lg lg:mt-3">Start
+                Now</button>
+        </div>
+        <!--img-->
+        <div class="absolute inset-0">
+            <!--kaca pembesar-->
+            <img src="./assets/kaca pembesar.png"
+                class="absolute right-6 top-52 w-48 rotate-3 md:w-70 md:top-10 md:rotate-0 md:right-4 lg:w-100 lg:right-30 lg:top-40 lg:h-110"
+                alt="kaca pembesar" />
+            <!--buku-->
+            <img src="./assets/book illustration.png"
+                class="absolute right-10 top-110 w-46 rotate-5 md:right-20 md:top-70 md:w-56 lg:w-70 lg:right-60 lg:top-120 lg:rotate-0"
+                alt="buku" />
+            <!--pensil-->
+            <img src="./assets/pencil illustration.png"
+                class="absolute left-43 top-85 w-32 rotate-0 md:left-70 md:w-40 md:top-60 md:rotate-10 lg:w-50 lg:left-[45%] lg:top-100 lg:rotate-0"
+                alt="pensil" />
+        </div>
+    </section>
+
+    <!--our impact-->
+    <section class="min-h-screen relative py-24 md:py-32 overflow-hidden bg-white">
+        <div class="absolute -bottom-40 -right-20 w-120 h-120 bg-[#FFEDBF] rounded-full blur-[120px] opacity-70"></div>
+
+        <div class="relative z-10 text-center mb-16 md:mb-24 flex justify-center items-center h-24 md:h-32 px-6">
+            <h2
+                class="absolute text-5xl md:text-[90px] lg:text-[110px] font-Playfair text-slate-300 opacity-40 font-extrabold whitespace-nowrap">
+                Our Impact
+            </h2>
+            <h1 class="relative text-[32px] md:text-[42px] lg:text-[72px] text-[#1E4A47] font-Playfair font-bold z-10">
+                Our Impact
+            </h1>
+        </div>
+
+        <div
+            class="relative z-10 h-auto md:h-112 flex flex-col md:flex-row items-center md:items-start justify-center gap-10 md:gap-0 mt-16 md:mt-24 px-6 max-w-7xl mx-auto">
+
+            <div
+                class="relative bg-white p-10 md:p-14 rounded-t-[3rem] rounded-bl-[3rem] rounded-br-2xl shadow-2xl rotate-[-7deg] z-20 shrink-0 w-full max-w-sm md:w-auto">
+                <h2 class="text-6xl md:text-8xl font-bold text-[#433477] mb-2">10K+</h2>
+                <p class="text-2xl md:text-3xl text-[#433477]">Students</p>
+                <img src="./assets/Ellipse 45.png" alt="user" class="absolute -bottom-10 -left-10 w-24 h-24 z-30">
+            </div>
+
+            <div
+                class="relative bg-white p-10 md:p-14 rounded-t-[4rem] rounded-b-4xl shadow-2xl rotate-3 z-10 shrink-0 w-full max-w-sm md:w-auto md:-ml-12 md:mt-10">
+                <h2 class="text-6xl md:text-8xl font-bold text-[#433477] mb-2">120+</h2>
+                <p class="text-2xl md:text-3xl text-[#433477]">Courses</p>
+                <img src="./assets/laptop illustration.png" alt="laptop"
+                    class="absolute -bottom-12 left-1/2 -translate-x-1/2 w-32 z-20">
+            </div>
+
+            <div
+                class="relative bg-white p-10 md:p-14 rounded-t-3xl rounded-bl-3xl rounded-br-[4rem] shadow-2xl rotate-[8deg] z-0 shrink-0 w-full max-w-sm md:w-auto md:-ml-16 md:mt-20">
+                <h2 class="text-6xl md:text-8xl font-bold text-[#433477] mb-2">438+</h2>
+                <p class="text-2xl md:text-3xl text-[#433477]">Teachers</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--our mission-->
+    <section class="min-h-screen py-24 md:py-32 relative overflow-hidden bg-white">
+        <div class="absolute top-0 -right-20 w-160 h-120 bg-[#FFEDBF] rounded-full blur-[120px] opacity-60"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="relative text-center mb-20 md:mb-32 flex justify-center items-center h-24 md:h-32">
+                <h2 class="absolute text-5xl md:text-[90px] lg:text-[110px] font-Playfair text-slate-300 opacity-40 font-extrabold whitespace-nowrap">
+                    Our Mission
+                </h2>
+                <h1 class="relative text-[32px] md:text-[42px] lg:text-[72px] text-[#1E4A47] font-Playfair font-bold z-10">
+                    Our Mission
+                </h1>
+            </div>
+
+            <div class="flex flex-col gap-24 md:gap-32 mt-10 max-w-5xl mx-auto">
+                
+                <div class="flex justify-start relative w-full pr-12 md:pr-0">
+                    <div class="relative w-full max-w-lg lg:max-w-2xl">
+                        <div class="bg-white/80 backdrop-blur-xl px-8 py-10 md:px-10 md:py-12 rounded-4xl rounded-br-2xl shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-white/60 -rotate-2 relative z-10">
+                            <p class="text-lg md:text-xl text-[#433477] leading-relaxed font-medium">
+                                Our mission is to make learning accessible and engaging for students everywhere. We help students from elementary to high school develop their knowledge and learning skills.
+                            </p>
+                        </div>
+                        <img src="./assets/board illustration.png" alt="board" class="absolute -right-32 md:-right-64 top-1/2 -translate-y-1/2 w-48 md:w-72 z-20 drop-shadow-2xl rotate-3">
+                    </div>
+                </div>
+
+                <div class="flex justify-end relative w-full pl-12 md:pr-4 md:pl-0">
+                    <div class="relative w-full max-w-lg lg:max-w-2xl">
+                        <div class="bg-white/80 backdrop-blur-xl px-8 py-10 md:px-10 md:py-12 rounded-4xl rounded-tl-2xl shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-white/60 rotate-2 relative z-10">
+                            <p class="text-lg md:text-xl text-[#433477] leading-relaxed font-medium">
+                                We provide courses in programming, digital design, and technology skills to help students develop practical abilities and prepare for future careers in the digital industry.
+                            </p>
+                        </div>
+                        <img src="./assets/achery illustration.png" alt="archery" class="absolute -left-16 md:-left-64 top-1/2 -translate-y-1/2 w-48 md:w-72 z-10 drop-shadow-2xl -rotate-2">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--trending courses-->
+    <section class="relative py-12 md:py-24 bg-linear-to-r from-slate-100 to-slate-200 overflow-hidden">
+
+        <div
+            class="absolute top-[-10%] -right-20 w-120 h-175 bg-[#D4CAF8] rounded-full blur-[110px] opacity-60 -z-10 pointer-events-none">
+        </div>
+        <div
+            class="absolute -bottom-20 -left-20 w-100 h-125 bg-[#FFF4D9] rounded-full blur-[110px] opacity-60 -z-10 pointer-events-none">
+        </div>
+        <div class="relative z-10 text-center mb-10 md:mb-16 flex justify-center items-center h-20 md:h-32">
+            <h2
+                class="absolute text-5xl md:text-[90px] font-Playfair text-slate-300 opacity-40 font-extrabold whitespace-nowrap">
+                Trending Courses
+            </h2>
+            <h3
+                class="relative text-[32px] md:text-[42px] lg:text-[64px] font-Playfair font-semibold text-[#1E4A47] z-10">
+                Trending Courses
+            </h3>
+        </div>
+
+        <!--container-->
+        <div
+            class="max-w-6xl mx-auto p-8 md:p-12 w-[95%] md:w-full bg-[#41A199]/10 rounded-[20px] border border-white/10 backdrop-blur-md shadow-[inset_0_8px_15px_-5px_rgba(0,0,0,0.1),inset_0_4px_6px_rgba(0,0,0,0.05)]">
+            <div id="course-slider"
+                class="flex md:grid md:grid-cols-3 gap-4 md:gap-8 overflow-x-auto md:overflow-visible scroll-smooth snap-x snap-mandatory no-scrollbar pb-4 md:pb-0">
+                <!--card 1-->
+                <div
+                    class="snap-center shrink-0 w-70 md:w-full bg-[#1E4A47] rounded-2xl  p-6 lg:hover:scale-105 md:hover:scale-105 lg:bg-white md:bg-white md:hover:bg-[#1E4A47] lg:hover:bg-[#1E4A47] transition-all duration-300 font-jakarta group cursor-pointer">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4
+                            class="text-xl font-bold text-white lg:text-[#433477] md:text-[#433477] group-hover:text-white transition-colors duration-300">
+                            Advanced Mathematics
+                        </h4>
+                        <div
+                            class="w-10 h-10 rounded-full bg-[#443577] lg:group-hover:bg-[#C9BDEF] md:group-hover:bg-[#C9BDEF] lg:group-hover:text-[#1E4A47] md:group-hover:text-[#1E4A47]  flex items-center justify-center text-white transition-all duration-300">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </div>
+                    </div>
+                    <hr
+                        class="mb-4 border-1.5 border-white md:border-[#433477] lg:border-[#433477] lg:group-hover:border-white md:group-hover:border-white transition-colors duration-300">
+                    <img src="./assets/trending course2.png" class="rounded-xl mb-4 w-full h-40 object-cover">
+                    <p
+                        class="text-sm tracking-wide text-white lg:group-hover:text-white lg:text-[#433477] md:group-hover:text-white md:text-[#433477] transition-colors duration-300">
+                        Solve complex problems with expert guidance.
+                    </p>
+                </div>
+                <!-- card 2 -->
+                <div
+                    class="snap-center shrink-0 w-70 md:w-full bg-[#1E4A47] rounded-2xl  p-6 lg:hover:scale-105 md:hover:scale-105 lg:bg-white md:bg-white md:hover:bg-[#1E4A47] lg:hover:bg-[#1E4A47] transition-all duration-300 font-jakarta group cursor-pointer">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4
+                            class="text-xl font-bold text-white lg:text-[#433477] md:text-[#433477] group-hover:text-white transition-colors duration-300">
+                            Mobile Video Editing
+                        </h4>
+                        <div
+                            class="w-10 h-10 rounded-full bg-[#443577] lg:group-hover:bg-[#C9BDEF] md:group-hover:bg-[#C9BDEF] lg:group-hover:text-[#1E4A47] md::group-hover:text-[#1E4A47]  flex items-center justify-center text-white transition-all duration-300">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </div>
+                    </div>
+
+                    <hr
+                        class="mb-4 border-1.5 border-white md:border-[#433477] lg:border-[#433477] lg:group-hover:border-white md:group-hover:border-white transition-colors duration-300">
+                    <img src="./assets/trending course 1.png"
+                        class="rounded-xl mb-4 w-full h-40 object-cover shadow-lg">
+                    <p
+                        class="text-sm tracking-wide text-white lg:group-hover:text-white lg:text-[#433477] md:group-hover:text-white md:text-[#433477] transition-colors duration-300">
+                        Create professional videos using simple tools.
+                    </p>
+                </div>
+                <!-- card 3 -->
+                <div
+                    class="snap-center shrink-0 w-70 md:w-full bg-[#1E4A47] rounded-2xl  p-6 lg:hover:scale-105 md:hover:scale-105 lg:bg-white md:bg-white md:hover:bg-[#1E4A47] lg:hover:bg-[#1E4A47] transition-all duration-300 font-jakarta group cursor-pointer">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4
+                            class="text-xl font-bold text-white lg:text-[#433477] md:text-[#433477] group-hover:text-white transition-colors duration-300">
+                            Creative Content Creation
+                        </h4>
+                        <div
+                            class="w-10 h-10 rounded-full bg-[#443577] lg:group-hover:bg-[#C9BDEF] md:group-hover:bg-[#C9BDEF] lg:group-hover:text-[#1E4A47] md::group-hover:text-[#1E4A47]  flex items-center justify-center text-white transition-all duration-300">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </div>
+                    </div>
+
+                    <hr
+                        class="mb-4 border-1.5 border-white md:border-[#433477] lg:border-[#433477] lg:group-hover:border-white md:group-hover:border-white transition-colors duration-300">
+                    <img src="./assets/trending course 3.png" class="rounded-xl mb-4 w-full h-40 object-cover">
+                    <p
+                        class="text-sm text-white lg:group-hover:text-white lg:text-[#433477] md:group-hover:text-white md:text-[#433477] transition-colors duration-300 tracking-wide">
+                        Learn strategies to produce engaging content.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex md:hidden justify-center items-center gap-6 mt-6">
+                <button onclick="scrollSlider('left')"
+                    class="w-12 h-12 rounded-full border border-teal-800 flex items-center justify-center text-tittle">
+                    <i class="ri-arrow-left-s-line text-2xl"></i>
+                </button>
+                <button onclick="scrollSlider('right')"
+                    class="w-12 h-12 rounded-full border border-teal-800 flex items-center justify-center text-tittle ">
+                    <i class="ri-arrow-right-s-line text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <style>
+            /*menghilangkan scrollbar tapi fungsi scroll tetap jalan*/
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        </style>
+
+        </div>
+    </section>
+
+    <!--testimonials-->
+    <section class="relative bg-bg py-16 md:py-28 bg-linear-to-r from-slate-100 to-slate-200 overflow-hidden group">
+        <div
+            class="absolute top-[-10%] -right-20 w-100 h-175 bg-[#bbdaf7] rounded-full blur-[110px] opacity-60 -z-10 pointer-events-none">
+        </div>
+        <div
+            class="absolute -bottom-20 -left-20 w-90 h-125 bg-[#cdeafe] rounded-full blur-[110px] opacity-60 -z-10 pointer-events-none">
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-5 md:px-6">
+
+            <!--flex column mobile-->
+            <div class="flex flex-col md:grid md:grid-cols-2 gap-14 md:gap-20 items-center md:min-h-112.5">
+                <!--kanan-->
+                <div
+                    class="flex flex-col justify-center h-full items-center md:items-start text-center md:text-left order-1 md:order-2 space-y-5 md:pl-16 lg:pl-24">
+                    <!--title-->
+                    <div class="relative z-10 text-center mb-10 md:mb-16 flex justify-center items-center h-10 md:h-32">
+                        <h2
+                            class="absolute text-[50px] md:text-[90px] lg:text-[100px] font-Playfair text-slate-300 opacity-40 font-extrabold whitespace-nowrap">
+                            Testimonials</h2>
+                        <h3
+                            class="relative text-[32px] md:text-[42px] lg:text-[64px] font-Playfair font-semibold text-[#1E4A47] z-10 whitespace-nowrap">
+                            Testimonials </h3>
+                    </div>
+                    <!--rating-->
+                    <div class="flex items-center justify-center md:justify-start">
+                        <span class="text-gray-700 text-base md:text-lg font-semibold">
+                            4.9/5
+                        </span>
+                    </div>
+                    <!--description-->
+                    <p class="text-[#77709F] text-sm md:text-base leading-relaxed max-w-md">
+                        Trusted by thousands of learners. Quality courses that help students grow and build real skills.
+                    </p>
+                </div>
+
+                <!--card-->
+                <div class="relative flex flex-col items-center  md:mt-0 order-2 md:order-1">
+                    <!--card container-->
+                    <div id="testimonialContainer"
+                        class="relative w-full px-60  md:max-w-none md:w-163 h-90 sm:h-100 md:h-110">
+                    </div>
+                    <!--nav button-->
+                    <button id="nextTestimoni"
+                        class=" bg-white border-2 border-[#1E4A47] text-[#1E4A47] px-10 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:text-text hover:border-text hover:scale-105 hover:-translate-y-1 hover:shadow-xl">
+                        Next
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--FAQ-->
+    <section class="relative py-12 md:py-24 bg-linear-to-r from-slate-100 to-slate-200 overflow-hidden">
+        <div
+            class="absolute top-[-30%] -left-20 w-80 h-175 bg-[#B3E5FA] rounded-full blur-[120px] opacity-60 -z-10 pointer-events-none">
+        </div>
+        <div
+            class="absolute -bottom-80 -left-20 w-100 h-125 bg-[#8BC7FF] rounded-full blur-[120px] opacity-50 -z-10 pointer-events-none">
+        </div>
+        <div
+            class="absolute -bottom-20 -right-20 w-100 h-125 bg-[#D4CAF8] rounded-full blur-[110px] opacity-60 -z-10 pointer-events-none">
+        </div>
+
+        <div class="relative z-10 max-w-336 w-full mx-auto p-8 md:p-16
+               bg-[#41A199]/10 rounded-[40px] border border-white/20 backdrop-blur-md
+               shadow-outer-bottom shadow-inner-top
+               flex flex-col md:flex-row gap-12 md:gap-20">
+
+            <div class="md:w-1/3 flex flex-col items-start">
+                <h2
+                    class="text-[#162E6E] text-[32px] md:text-[40px] font-bold uppercase font-Playfair leading-tight mb-6">
+                    Your Questions Answered
+                </h2>
+                <p class="text-[#162E6E] font-jakarta text-lg mb-10 max-w-sm">
+                    Everything you need to know before starting your learning journey with us
+                </p>
+                <button
+                    class="bg-[#41A199] hover:bg-[#348e86] text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-md font-semibold">
+                    See All FAQs
+                </button>
+            </div>
+            <div class="md:w-2/3 flex flex-col">
+
+                <div class="border-b border-gray-300/50 font-jakarta">
+                    <input type="checkbox" id="faq-1" class="peer hidden" checked>
+                    <label for="faq-1" class="flex justify-between items-center py-6 cursor-pointer group">
+                        <span
+                            class="text-[#162E6E] font-semibold text-xl group-hover:text-[#41A199] transition-colors">Who
+                            are these course for?</span>
+                        <i
+                            class="ri-arrow-down-s-line text-2xl transition-transform duration-300 peer-checked:group-[]:rotate-180 text-[#1e2d5b]"></i>
+                    </label>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out peer-checked:max-h-40">
+                        <p class="pb-6 text-[#162E6E] font-jakarta text-lg leading-relaxed">
+                            These courses are designed for students from middle school to high school who want to learn
+                            technology, programming, and digital design.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="border-b border-gray-300/50 font font-jakarta">
+                    <input type="checkbox" id="faq-2" class="peer hidden">
+                    <label for="faq-2" class="flex justify-between items-center py-6 cursor-pointer group">
+                        <span
+                            class="text-[#1e2d5b] font-semibold text-xl group-hover:text-[#41A199] transition-colors">What
+                            subjects can I learn here?</span>
+                        <i
+                            class="ri-arrow-down-s-line text-2xl transition-transform duration-300 peer-checked:group-[]:rotate-180 text-[#1e2d5b]"></i>
+                    </label>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out peer-checked:max-h-40">
+                        <p class="pb-6  text-[#162E6E] text-lg leading-relaxed">
+                            Web development, UI/UX design,data science, digital marketing, and more practical digital
+                            skills.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="border-b border-gray-300/50 font-jakarta">
+                    <input type="checkbox" id="faq-3" class="peer hidden">
+                    <label for="faq-3" class="flex justify-between items-center py-6 cursor-pointer group">
+                        <span
+                            class="text-[#1e2d5b] font-semibold text-xl group-hover:text-[#41A199] transition-colors">Do
+                            i need prior experience?</span>
+                        <i
+                            class="ri-arrow-down-s-line text-2xl transition-transform duration-300 peer-checked:group-[]:rotate-180 text-[#1e2d5b]"></i>
+                    </label>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out peer-checked:max-h-40">
+                        <p class="pb-6 text-[#162E6E] text-lg leading-relaxed">
+                            No prior experience is needed! We have classes ranging from absolute beginners to advanced
+                            levels.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="border-b border-gray-300/50 font-jakarta">
+                    <input type="checkbox" id="faq-3" class="peer hidden">
+                    <label for="faq-3" class="flex justify-between items-center py-6 cursor-pointer group">
+                        <span
+                            class="text-[#1e2d5b] font-semibold text-xl group-hover:text-[#41A199] transition-colors">Can
+                            I learn at my own pace?</span>
+                        <i
+                            class="ri-arrow-down-s-line text-2xl transition-transform duration-300 peer-checked:group-[]:rotate-180 text-[#1e2d5b]"></i>
+                    </label>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out peer-checked:max-h-40">
+                        <p class="pb-6 text-[#162E6E] text-lg leading-relaxed">
+                            Yes, you can learn anytime, anywhere.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="border-b border-gray-300/50 font-jakarta">
+                    <input type="checkbox" id="faq-3" class="peer hidden">
+                    <label for="faq-3" class="flex justify-between items-center py-6 cursor-pointer group">
+                        <span
+                            class="text-[#1e2d5b] font-semibold text-xl group-hover:text-[#41A199] transition-colors">Will
+                            I create projects during the course?</span>
+                        <i
+                            class="ri-arrow-down-s-line text-2xl transition-transform duration-300 peer-checked:group-[]:rotate-180 text-[#1e2d5b]"></i>
+                    </label>
+                    <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out peer-checked:max-h-40">
+                        <p class="pb-6 text-[#162E6E] text-lg leading-relaxed">
+                            Yes, you’ll build real projects for your portfolio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="bg-[#004B6B] text-white pt-16 pb-8 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
+
+                <div class="flex flex-col space-y-6">
+                    <div class="flex items-center space-x-2 group">
+                        <div
+                            class="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform duration-300">
+                            <img src="./assets/logo.png" alt="logo" class="w-8">
+                        </div>
+                    </div>
+                    <p class="text-white text-sm leading-relaxed max-w-xs">
+                        Learn design, coding, and digital technology through practical courses that help students build
+                        useful skills for the future.
+                    </p>
+                </div>
+
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Company</h4>
+                    <ul class="space-y-4">
+                        <li><a href="./index.html"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">Home</a>
+                        </li>
+                        <li><a href="./about.html"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">About
+                                Us</a>
+                        </li>
+                        <li><a href="./content.html"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">Our
+                                Values</a>
+                        </li>
+                        <li><a href="./contact.html"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Resources</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block ">Our
+                                Courses</a></li>
+                        <li><a href="#"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">Tesrimonials</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">Benefits</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white hover:translate-x-2 transition-all duration-300 inline-block">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-center space-x-3 group cursor-pointer">
+                            <i class="ri-phone-line text-xl hover:transition duration-300 hover:scale-110"></i>
+                            <span class="text-sm group-hover:text-white transition-colors">+62 41234 5678</span>
+                        </li>
+                        <li class="flex items-center space-x-3 group cursor-pointer">
+                            <i class="ri-mail-line text-xl hover:transition duration-300 hover:scale-110"></i>
+                            <span class="text-sm group-hover:text-white transition-colors">hello@smartjourney.com</span>
+                        </li>
+                        <li class="flex items-center space-x-3 group cursor-pointer">
+                            <i class="ri-instagram-line text-xl hover:transition duration-300 hover:scale-110"></i>
+                            <span class="text-sm group-hover:text-white transition-colors">smartjourney.id</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+            <div
+                class="border-t border-white pt-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs text-slate-400">
+                <p>© 2026 LearnHub. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
